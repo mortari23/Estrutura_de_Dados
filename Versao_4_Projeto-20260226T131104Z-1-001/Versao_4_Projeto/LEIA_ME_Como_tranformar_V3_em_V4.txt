@@ -1,0 +1,37 @@
+Como transformar V3 em V4
+-------------------------
+
+V3 tem dois arquivos: Lab..._Main e Lab...Acoes
+- new dentro do main faz a instanciação de Lab...Acoes para poder acessar os métodos
+- estes dois arquivos agora são Lab...V4_ANTES_AULA...
+
+V4 terá três arquivos: Lab...Main, Lab...Coordenador e Lab...Acoes
+- new em main faz a instanciação de Lab...Coordenador
+- Lab...Coordenador tem apenas um método public denominado executaTudo
+- new dentro do executaTudo faz a instanciação de Lab...Acoes para poder acessar os métodos
+
+Passo-a-passo para obter V4
+1. inicialmente, Lab...Acoes não muda
+2. duplicar o arquivo Lab...Main e renomear a cópia para Lab...Coordenador
+3. em Lab...Coordenador, corrigir o nome da classe na linha public class para que fique igual ao nome do arquivo
+4. em Lab...Coordenador, substituir a linha public static void main... por public void executaTudo()
+5. em Lab...Main, retirar (deletar) todo o conteúdo de dentro do main, mantendo as chaves { e } que o delimitam
+6. dentro do main, agora vazio, incluir apenas dois comandos:
+6a. Lab...Coordenador coord = new Lab...Coordenador();  // instanciação do coordenador
+6b. coord.executaTudo();   // acionamento do método executaTudo
+
+Transformar em Projeto Java no VSCode
+1. com o VSCode "vazio", isto é, nenhum arquivo ou pasta aberta, clicar no Explorer e depois no botão "Criar Projeto Java"
+2. escolher "No build tools", depois a pasta dentro da qual ficará o projeto e por fim dar um nome ao projeto
+3. por meio do gerenciador de arquivos do S.O., copiar para a pasta src dentro do projeto os três arquivos de V4 construídos conforme instruções acima
+4. deletar o arquivo App.java, criado automaticamente pelo VSCode
+5. voltar ao VSCode e testar o projeto
+
+Para entrega da tarefa, não esquecer de:
+1. colocar seu próprio nome na impressão dos dados do autor de trabalho (em Lab...Coordenador)
+2. transformar as ações 3, 4 e 5 (comentadas em Lab...Coordenador) em métodos de Lab...Acoes
+
+
+
+
+
